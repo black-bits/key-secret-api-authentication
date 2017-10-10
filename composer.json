@@ -1,0 +1,44 @@
+{
+  "name": "black-bits/key-secret-api-authentication",
+  "description": "Key Secret Api Authentication extension for Laravel",
+  "license": "MIT",
+  "homepage": "https://github.com/black-bits/key-secret-api-authentication",
+  "support": {
+    "issues": "https://github.com/black-bits/key-secret-api-authentication/issues",
+    "source": "https://github.com/black-bits/key-secret-api-authentication"
+  },
+  "authors": [
+    {
+      "name": "Oliver Heck",
+      "email": "mail@oliverheck.de"
+    },
+    {
+      "name": "Andreas Przywara",
+      "email": "andreas.przywara@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "illuminate/support": "^5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BlackBits\\KeySecretApiAuthentication\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BlackBits\\KeySecretApiAuthentication\\KeySecretServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

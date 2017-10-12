@@ -82,8 +82,13 @@ class KeySecretGuard implements Guard
     private function getCredentialsForRequest()
     {
         $token = base64_decode($this->request->bearerToken());
+        $parts = explode(':', $token);
 
-        list($credentials['key'], $credentials['secret']) = explode(':', $token);
+        if (count($parts) < 2) {
+            return [];
+        }
+
+        list($credentials['key'], $credentials['secret']) = $parts;
 
         return $credentials ?: [];
     }
